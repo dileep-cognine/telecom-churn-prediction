@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  churn-api:
+    build: .
+    container_name: churn-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./artifacts:/app/artifacts
+    environment:
+      PROJECT_ROOT: /app
+      ARTIFACTS_DIR: /app/artifacts
+      DATA_DIR: /app/data
+      API_HOST: 0.0.0.0
+      API_PORT: 8000
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    container_name: churn-redis
+    ports:
+      - "6379:6379"
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: churn-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
