@@ -175,14 +175,13 @@ source telecom-venv/bin/activate
 ```
 ---
 ### 3.Install Dependencies
-Local Install
+### Option 1 (Recommended - simple)
 ```
-pip install .
+pip install -r requirements.txt
 ```
-Development Install
-- If using dev dependencies:
+### Option 2 (Advanced / developer mode)
 ```
-pip install ".[dev]"
+pip install -e ".[dev]"
 ```
 ---
 ## 4.Model Training
