@@ -278,12 +278,13 @@ Example Response
 ```
 ---
 # Model Performance
-Metric	Value
-Accuracy	0.78
-Precision	0.58
-Recall	0.65
-F1 Score	0.61
-ROC-AUC	0.82
+| Metric     | Value |
+|-----------|------|
+| Accuracy  | 0.78 |
+| Precision | 0.58 |
+| Recall    | 0.65 |
+| F1 Score  | 0.61 |
+| ROC-AUC   | 0.82 |
 # Running Tests
 Run unit tests using **pytest**:
 ```

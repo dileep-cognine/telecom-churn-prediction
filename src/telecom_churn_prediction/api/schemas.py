@@ -44,7 +44,7 @@ class ModelInfo(BaseModel):
 
 class PredictionResponse(BaseModel):
     """Structured churn prediction API response."""
-
+    summary: str
     churn_probability: float
     prediction: PredictionDetails
     model_info: ModelInfo

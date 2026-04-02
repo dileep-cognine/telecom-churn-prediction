@@ -7,6 +7,7 @@ from telecom_churn_prediction.api.dependencies import get_prediction_service
 class FakePredictionService:
     def predict(self, payload: dict):
         class Result:
+            summary = "This customer is at high risk of churn."
             churn_probability = 0.82
             prediction = {
                 "label": 1,
@@ -55,6 +56,7 @@ def test_predict_endpoint_returns_prediction() -> None:
 
     assert response.status_code == 200
     body = response.json()
+    assert body["summary"] == "This customer is at high risk of churn."
     assert body["churn_probability"] == 0.82
     assert body["prediction"]["label"] == 1
     assert body["prediction"]["label_name"] == "Churn"
