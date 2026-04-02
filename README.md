@@ -117,8 +117,7 @@ telecom-churn-prediction/
 │
 ├── reports/
 │ ├── figures/
-│ ├── evaluation_report.md
-│ └── deployment_guide.md
+│ └── evaluation_report.md
 │
 ├── notebooks/
 │ ├── 01_eda.ipynb
