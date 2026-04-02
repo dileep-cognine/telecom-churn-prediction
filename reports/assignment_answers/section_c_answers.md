@@ -186,22 +186,22 @@ For customer #4421 with churn probability = 89%
 
 A SHAP waterfall plot would show:
 
-# 1.Base value
+### 1.Base value
 - the average churn tendency in the dataset
-# 2.Positive contributions
+### 2.Positive contributions
 - features increasing churn risk, for example:
     - short tenure
     - month-to-month contract
     - high monthly charges
     - lack of tech support
     - no online security
-# 3.Negative contributions
+### 3.Negative contributions
 - features reducing churn risk, for example:
     - long customer history
     - automatic payment
     - bundled services
     - stronger support options
-# 4.Final prediction
+### 4.Final prediction
 - all contributions combined produce the final churn probability of 0.89
 ## Interpretation
 
@@ -217,7 +217,7 @@ In the project, SHAP is implemented and used to generate explainability outputs,
 
 LIME and SHAP are both explainability methods, but they work differently.
 
-### LIME
+# LIME
 
 LIME explains a prediction by:
 
@@ -227,7 +227,7 @@ LIME explains a prediction by:
 
 So LIME is a local approximation method.
 
-### SHAP
+# SHAP
 
 SHAP explains a prediction using:
 
@@ -237,7 +237,7 @@ a principled and consistent attribution framework
 
 So SHAP provides a more theoretically grounded explanation.
 
-### Key limitation of LIME
+## Key limitation of LIME
 
 The biggest limitation of LIME is instability.
 
