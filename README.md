@@ -143,8 +143,6 @@ telecom-churn-prediction/
 └── README.md
 ```
 
-The core assignment solution is the FastAPI /predict service backed by a trained XGBoost pipeline. Additional components such as Prometheus monitoring, Redis-ready caching, and explainability modules were added to demonstrate production-readiness and modular design.
-
 # Installation (Local Setup)
 
 ### 1. Clone the repository
@@ -276,7 +274,8 @@ Example Response
   }
 }
 ```
----
+The core assignment solution is the FastAPI /predict service backed by a trained XGBoost pipeline. Additional components such as Prometheus monitoring, Redis-ready caching, and explainability modules were added to demonstrate production-readiness and modular design.
+
 # Model Performance
 | Metric     | Value |
 |-----------|------|
