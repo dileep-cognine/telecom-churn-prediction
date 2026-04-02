@@ -34,8 +34,7 @@ The dataset is **imbalanced**, with more non-churn customers.
 
 ##  Threshold Optimization
 
-Instead of default `0.5`, the optimal threshold selected is:
-0.3 or 0.4
+The API does not use a hardcoded default threshold of 0.5. It loads the optimized threshold from **selected_threshold.json** and applies it during inference.
 
 ### Reason:
 - Improves recall
