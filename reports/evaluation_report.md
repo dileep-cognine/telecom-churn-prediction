@@ -34,7 +34,7 @@ The dataset is **imbalanced**, with more non-churn customers.
 
 ##  Threshold Optimization
 
-The API does not use a hardcoded default threshold of 0.5. It loads the optimized threshold from **selected_threshold.json** and applies it during inference.
+The API does not use a hardcoded default threshold of 0.5. It loads the optimized threshold from ```**selected_threshold.json**``` and applies it during inference.
 
 ### Reason:
 - Improves recall
