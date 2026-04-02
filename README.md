@@ -142,7 +142,8 @@ telecom-churn-prediction/
 ├── docker-compose.yml
 └── README.md
 ```
-
+---
+The core assignment solution is the FastAPI /predict service backed by a trained XGBoost pipeline. Additional components such as Prometheus monitoring, Redis-ready caching, and explainability modules were added to demonstrate production-readiness and modular design.
 ---
 
 # Installation (Local Setup)
@@ -265,6 +266,7 @@ Example Request
 Example Response
 ```json
 {
+  "summary": "This customer is at high risk of churn.",
   "churn_probability": 0.9348,
   "prediction": {
     "label": 1,
@@ -285,6 +287,14 @@ Example Response
 | Recall    | 0.71 |
 | F1 Score  | 0.60 |
 | ROC-AUC   | 0.82 |
+## Threshold Usage
+
+The model uses an optimized threshold (not default 0.5) loaded from:
+```
+artifacts/selected_threshold.json
+```
+This ensures predictions align with business objectives
+
 # Running Tests
 Run unit tests using **pytest**:
 ```
