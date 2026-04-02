@@ -35,7 +35,7 @@ The dataset is **imbalanced**, with more non-churn customers.
 ##  Threshold Optimization
 
 Instead of default `0.5`, the optimal threshold selected is:
-0.3 or 0.3
+0.3 or 0.4
 
 ### Reason:
 - Improves recall
