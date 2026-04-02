@@ -142,13 +142,6 @@ telecom-churn-prediction/
 ├── docker-compose.yml
 └── README.md
 ```
-<<<<<<< HEAD
----
-The core assignment solution is the FastAPI /predict service backed by a trained XGBoost pipeline. Additional components such as Prometheus monitoring, Redis-ready caching, and explainability modules were added to demonstrate production-readiness and modular design.
----
-=======
->>>>>>> e3d963a4f3efb59811d50af34abef571d79e81cd
-
 # Installation (Local Setup)
 
 ### 1. Clone the repository
@@ -210,8 +203,9 @@ Saved in:
 ```
 reports/figures/
 ```
-### Run Tests
-```bash
+# Running Tests
+Run unit tests using **pytest**:
+```
 pytest --cov=src --cov-report=term-missing
 ```
 # Running the API
@@ -291,19 +285,13 @@ The core assignment solution is the FastAPI /predict service backed by a trained
 | Recall    | 0.71 |
 | F1 Score  | 0.60 |
 | ROC-AUC   | 0.82 |
-## Threshold Usage
 
+## Threshold Usage
 The model uses an optimized threshold (not default 0.5) loaded from:
 ```
 artifacts/selected_threshold.json
 ```
-This ensures predictions align with business objectives
 
-# Running Tests
-Run unit tests using **pytest**:
-```
-pytest --cov=src --cov-report=term-missing
-```
 # Docker Deployment
 ## Build & Run
 ```
