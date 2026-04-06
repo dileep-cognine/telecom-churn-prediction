@@ -176,6 +176,7 @@ source telecom-venv/bin/activate
 pip install -r requirements.txt
 ```
 ### Option 2 (Advanced / developer mode)
+(use this for safe run)
 ```
 pip install -e ".[dev]"
 ```
